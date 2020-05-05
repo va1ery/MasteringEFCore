@@ -17,6 +17,7 @@ namespace MasteringEFCore.Web
         public static void Main(string[] args)
         {
             var host = BuildWebHost(args);
+/*
             using (var scope = host.Services.CreateScope())
             {
                 var services = scope.ServiceProvider;
@@ -31,12 +32,10 @@ namespace MasteringEFCore.Web
                     logger.LogError(ex, "An error occurred initializing the database.");
                 }
             }
+     */
             host.Run();
         }
-        //public static void Main(string[] args)
-        //{
-        //    BuildWebHost(args).Run();
-        //}
+
 
         public static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
